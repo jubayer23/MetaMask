@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/createFragmentWallet"
+        android:name="com.example.metamask.ui.createWallet.CreateWalletFragment"
+        android:label="fragment_create_wallet"
+        tools:layout="@layout/fragment_create_wallet" >
+        <action
+            android:id="@+id/action_createFragmentWallet_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.metamask.ui.landingPage.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_createFragmentWallet"
+            app:destination="@id/createFragmentWallet" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_importWalletFragment"
+            app:destination="@id/importWalletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/importWalletFragment"
+        android:name="com.example.metamask.ui.importWallet.ImportWalletFragment"
+        android:label="fragment_import_wallet"
+        tools:layout="@layout/fragment_import_wallet" >
+        <action
+            android:id="@+id/action_importWalletFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.example.metamask.ui.seedVerification.VerificationFragment"
+        android:label="VerificationFragment" >
+
+        <argument
+            android:name="phrase"
+            app:argType="string" />
+        <argument android:name="account"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_verificationFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.metamask.ui.home.HomeActivity"
+        android:label="HomeActivity" >
+        <argument
+            android:name="account"
+            app:argType="string" />
+    </activity>
+</navigation>
