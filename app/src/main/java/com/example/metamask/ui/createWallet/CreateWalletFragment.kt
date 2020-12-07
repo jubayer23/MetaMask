@@ -10,7 +10,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
-import com.example.metamask.CreateWalletFragmentDirections
 import com.example.metamask.R
 import com.example.metamask.databinding.FragmentCreateWalletBinding
 import com.mindorks.retrofit.coroutines.data.api.ApiHelper

@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.metamask.R
-import com.example.metamask.VerificationFragmentArgs
-import com.example.metamask.VerificationFragmentDirections
 import com.example.metamask.databinding.FragmentVerificationBinding
 
 

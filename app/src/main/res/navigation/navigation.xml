@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_create_wallet" >
         <action
             android:id="@+id/action_createFragmentWallet_to_verificationFragment"
-            app:destination="@id/verificationFragment" />
+            app:destination="@id/verificationFragment"
+            app:popUpTo="@id/welcomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -33,7 +34,9 @@
         tools:layout="@layout/fragment_import_wallet" >
         <action
             android:id="@+id/action_importWalletFragment_to_homeActivity"
-            app:destination="@id/homeActivity" />
+            app:destination="@id/homeActivity"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/verificationFragment"
@@ -47,7 +50,8 @@
             app:argType="string" />
         <action
             android:id="@+id/action_verificationFragment_to_homeActivity"
-            app:destination="@id/homeActivity" />
+            app:destination="@id/homeActivity"
+            app:popUpTo="@id/welcomeFragment" />
     </fragment>
     <activity
         android:id="@+id/homeActivity"

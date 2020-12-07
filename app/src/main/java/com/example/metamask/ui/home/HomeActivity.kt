@@ -6,7 +6,6 @@ import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.navArgs
-import com.example.metamask.HomeActivityArgs
 import com.example.metamask.R
 import com.example.metamask.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView

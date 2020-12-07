@@ -77,8 +77,8 @@ class HomeFragment : Fragment() {
                             binding.progressBar.visibility = View.GONE
                             resource.data?.let { seed -> Log.d("DEBUG", seed.toString())
 
-                                binding.tvBalance.setText("Account: " + seed.account_balance)
-                                binding.tvAccount.setText("Balance: " + seed.account_address)
+                                binding.tvBalance.setText("Balance: " + seed.account_balance)
+                                binding.tvAccount.setText("Account: " + seed.account_address)
 
                                 //view?.findNavController()?.navigate(CreateWalletFragmentDirections.actionCreateFragmentWalletToVerificationFragment(seed.seed_phrase, seed.account_address))
                             }
